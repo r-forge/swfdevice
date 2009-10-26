@@ -5,7 +5,11 @@ download.file('http://r-forge.r-project.org/plugins/scmsvn/viewcvs.php/*checkout
 	'testSwfDevice.R')
 source('testSwfDevice.R')
 swfs <- list.files(,".swf")
+pngs <- list.files(,".png")
 file.create('swfs.html')
 
-for(i in 1:length(swfs))
+for(i in 1:length(swfs)){
+	cat('<img src=\'',pngs[i],'\'/>\n',file='swfs.html',append=T,sep='')
 	system(paste('swfdump --xhtml',swfs[i],'>> swfs.html'))
+	cat('<br/>\n',file='swfs.html',append=T)
+}
