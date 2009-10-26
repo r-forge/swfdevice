@@ -9,7 +9,7 @@ pngs <- list.files(,".png")
 file.create('swfs.html')
 
 for(i in 1:length(swfs)){
-	cat('<img src=\'',pngs[i],'\'/>\n',file='swfs.html',append=T,sep='')
 	system(paste('swfdump --xhtml',swfs[i],'>> swfs.html'))
+	cat('<img src=\'',pngs[i],'\'/>\n',file='swfs.html',append=T,sep='')
 	cat('<br/>\n',file='swfs.html',append=T)
 }
