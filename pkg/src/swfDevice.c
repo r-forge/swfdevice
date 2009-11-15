@@ -1309,6 +1309,7 @@ static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfI
 			}else if(strcmp(fontfamily, "mono")){
 				font = swfInfo->mo;
 			}else if(strcmp(fontfamily, "sans")){
+<<<<<<< HEAD
 				font = swfInfo->ss;
 			}else if(strcmp(fontfamily, "")){
 				font = swfInfo->ss;
@@ -1340,10 +1341,44 @@ static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfI
 				font = swfInfo->se_i;
 			}else{
 				font = swfInfo->se_i;
+=======
+				font = swfInfo->ss;
+			}else if(strcmp(fontfamily, "")){
+				font = swfInfo->ss;
+			}else{
+				font = swfInfo->ss;
+			}
+			break;
+		case 2: //bold
+			if(strcmp(fontfamily, "serif")){
+				font = swfInfo->se_b;
+			}else if(strcmp(fontfamily, "mono")){
+				font = swfInfo->mo_b;
+			}else if(strcmp(fontfamily, "sans")){
+				font = swfInfo->ss_b;
+			}else if(strcmp(fontfamily, "")){
+				font = swfInfo->ss_b;
+			}else{
+				font = swfInfo->ss_b;
+			}
+			break;
+		case 3: //italic
+			if(strcmp(fontfamily, "serif")){
+				font = swfInfo->se_i;
+			}else if(strcmp(fontfamily, "mono")){
+				font = swfInfo->mo_i;
+			}else if(strcmp(fontfamily, "sans")){
+				font = swfInfo->ss_i;
+			}else if(strcmp(fontfamily, "")){
+				font = swfInfo->ss_i;
+			}else{
+				font = swfInfo->ss_i;
+>>>>>>> Bigfix in SWF_Polygon, fixing most gallery differences.
 			}
 			break;
 		case 4:
 			//bold italic
+<<<<<<< HEAD
 			if(strncmp(fontfamily, "serif", 5)){
 				font = swfInfo->se_b_i;
 			}else if(strncmp(fontfamily, "mono", 4)){
@@ -1354,6 +1389,18 @@ static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfI
 				font = swfInfo->se_b_i;
 			}else{
 				font = swfInfo->se_b_i;
+=======
+			if(strcmp(fontfamily, "serif")){
+				font = swfInfo->se_b_i;
+			}else if(strcmp(fontfamily, "mono")){
+				font = swfInfo->mo_b_i;
+			}else if(strcmp(fontfamily, "sans")){
+				font = swfInfo->ss_b_i;
+			}else if(strcmp(fontfamily, "")){
+				font = swfInfo->ss_b_i;
+			}else{
+				font = swfInfo->ss_b_i;
+>>>>>>> Bigfix in SWF_Polygon, fixing most gallery differences.
 			}
 			break;
 		case 5:
