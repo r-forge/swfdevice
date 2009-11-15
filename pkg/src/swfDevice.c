@@ -1350,35 +1350,33 @@ static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfI
 			}
 			break;
 		case 2: //bold
-			if(strcmp(fontfamily, "serif")){
+			if(strncmp(fontfamily, "serif", 5)){
 				font = swfInfo->se_b;
-			}else if(strcmp(fontfamily, "mono")){
+			}else if(strncmp(fontfamily, "mono", 4)){
 				font = swfInfo->mo_b;
-			}else if(strcmp(fontfamily, "sans")){
+			}else if(strncmp(fontfamily, "sans", 4)){
 				font = swfInfo->ss_b;
 			}else if(strcmp(fontfamily, "")){
-				font = swfInfo->ss_b;
+				font = swfInfo->se_b;
 			}else{
-				font = swfInfo->ss_b;
+				font = swfInfo->se_b;
 			}
 			break;
 		case 3: //italic
-			if(strcmp(fontfamily, "serif")){
+			if(strncmp(fontfamily, "serif", 5)){
 				font = swfInfo->se_i;
-			}else if(strcmp(fontfamily, "mono")){
+			}else if(strncmp(fontfamily, "mono", 4)){
 				font = swfInfo->mo_i;
-			}else if(strcmp(fontfamily, "sans")){
+			}else if(strncmp(fontfamily, "sans", 4)){
 				font = swfInfo->ss_i;
 			}else if(strcmp(fontfamily, "")){
-				font = swfInfo->ss_i;
+				font = swfInfo->se_i;
 			}else{
 				font = swfInfo->ss_i;
->>>>>>> Bigfix in SWF_Polygon, fixing most gallery differences.
 			}
 			break;
 		case 4:
 			//bold italic
-<<<<<<< HEAD
 			if(strncmp(fontfamily, "serif", 5)){
 				font = swfInfo->se_b_i;
 			}else if(strncmp(fontfamily, "mono", 4)){
@@ -1388,19 +1386,7 @@ static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfI
 			}else if(strcmp(fontfamily, "")){
 				font = swfInfo->se_b_i;
 			}else{
-				font = swfInfo->se_b_i;
-=======
-			if(strcmp(fontfamily, "serif")){
-				font = swfInfo->se_b_i;
-			}else if(strcmp(fontfamily, "mono")){
-				font = swfInfo->mo_b_i;
-			}else if(strcmp(fontfamily, "sans")){
 				font = swfInfo->ss_b_i;
-			}else if(strcmp(fontfamily, "")){
-				font = swfInfo->ss_b_i;
-			}else{
-				font = swfInfo->ss_b_i;
->>>>>>> Bigfix in SWF_Polygon, fixing most gallery differences.
 			}
 			break;
 		case 5:
