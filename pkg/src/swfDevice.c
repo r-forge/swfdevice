@@ -189,7 +189,6 @@ static Rboolean SWF_Setup( pDevDesc deviceInfo, const char *fileName,
 	swfInfo->debug = DEBUG;
 	swfInfo->nFrames = 0;
 	swfInfo->frameRate = frameRate;
-	swfInfo->polyLine = FALSE;
 	/*Initilize the SWF movie version 8 so more line styles can be used*/
 	swfInfo->m = newSWFMovieWithVersion(8);
 	
@@ -1309,39 +1308,6 @@ static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfI
 			}else if(strcmp(fontfamily, "mono")){
 				font = swfInfo->mo;
 			}else if(strcmp(fontfamily, "sans")){
-<<<<<<< HEAD
-				font = swfInfo->ss;
-			}else if(strcmp(fontfamily, "")){
-				font = swfInfo->ss;
-			}else{
-				font = swfInfo->ss;
-			}
-			break;
-		case 2: //bold
-			if(strncmp(fontfamily, "serif", 5)){
-				font = swfInfo->se_b;
-			}else if(strncmp(fontfamily, "mono", 4)){
-				font = swfInfo->mo_b;
-			}else if(strncmp(fontfamily, "sans", 4)){
-				font = swfInfo->ss_b;
-			}else if(strcmp(fontfamily, "")){
-				font = swfInfo->se_b;
-			}else{
-				font = swfInfo->se_b;
-			}
-			break;
-		case 3: //italic
-			if(strncmp(fontfamily, "serif", 5)){
-				font = swfInfo->se_i;
-			}else if(strncmp(fontfamily, "mono", 4)){
-				font = swfInfo->mo_i;
-			}else if(strncmp(fontfamily, "sans", 4)){
-				font = swfInfo->ss_i;
-			}else if(strcmp(fontfamily, "")){
-				font = swfInfo->se_i;
-			}else{
-				font = swfInfo->se_i;
-=======
 				font = swfInfo->ss;
 			}else if(strcmp(fontfamily, "")){
 				font = swfInfo->ss;
