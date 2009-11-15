@@ -1284,7 +1284,7 @@ static void SWF_LoadFont(const char *fontFile){
 	//Get the device info by pointer since this can be called from R
 	pDevDesc deviceInfo = GEcurrentDevice()->dev;
 	
-	/* Shortcut pointers to variables of interest. */
+	// Shortcut pointers to variables of interest. 
 	swfDevDesc *swfInfo = (swfDevDesc *) deviceInfo->deviceSpecific;
 	
 	//Load a fdb or ttf font
@@ -1294,6 +1294,7 @@ static void SWF_LoadFont(const char *fontFile){
 	
 	
 }
+
 
 	//Return the preloaded font object corresponding to the given face and family
 static SWFFont selectFont(int fontface, const char *fontfamily, swfDevDesc *swfInfo){
