@@ -270,6 +270,7 @@ static Rboolean SWF_Setup( pDevDesc deviceInfo, const char *fileName,
 	*/
 	deviceInfo->canClip = FALSE;
 
+
 	/*
 	 * These next parameters speficy if the device reacts to keyboard and 
 	 * mouse events. Since this device outputs to a file, not a screen window, 

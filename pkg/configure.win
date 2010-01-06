@@ -43,6 +43,7 @@ fi
 
 echo "  Ready to compile ming"
 
+
 LIB_HOME="C:/Rtools/MinGW"
 INC_DIR="${LIB_HOME}/include"
 LIB_DIR="${LIB_HOME}/lib"
